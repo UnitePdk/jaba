@@ -1,0 +1,31 @@
+package forStatement;
+
+public class ex01 {
+    public static void main(String[] args) {
+        // 구구단
+/*        for(int i=2; i<=9; i++){
+            for(int j=1; j<=9; j++){
+                System.out.printf("%d X %d = %d%n",i,j,i*j);
+            }
+        }*/
+
+        // 홀수단만 출력
+        for (int i = 2; i <= 9; i++) {
+            if (i % 2 == 0) {
+                continue;
+            }
+            for (int j = 1; j <= 9; j++) {
+                System.out.printf("%d X %d = %d%n", i, j, i * j);
+            }
+
+        }
+
+        // 단보다 곱하는 수가 크거나 같은 경우에만 출력
+        for (int i = 2; i <= 9; i++) {
+            for (int j = 1; j <= 9; j++) {
+                if (j < i) continue;
+                System.out.printf("%d X %d = %d%n", i, j, i * j);
+            }
+        }
+    }
+}
